@@ -14,7 +14,7 @@ namespace CityBoost.Controllers
 
         public HomeController()
         {
-            api = new APIIntegration();
+            api = APIIntegration.GetAPIInstance();
         }
 
         public ActionResult Index()

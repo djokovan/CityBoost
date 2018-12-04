@@ -14,6 +14,22 @@ namespace CityBoost.Data
     public class APIIntegration
     {
         readonly string teleportAPI = System.Configuration.ConfigurationManager.AppSettings["API"];
+        private static APIIntegration _apiInstance;
+
+        private APIIntegration()
+        {
+
+        }
+
+        public static APIIntegration GetAPIInstance()
+        {
+            if (_apiInstance == null)
+            {
+                _apiInstance = new APIIntegration();
+            }
+
+            return _apiInstance;
+        }
 
         public List<SelectListItem> GetContinents()
         {

@@ -5,7 +5,7 @@
 
 <div class="row">
     <div class="col-lg-12">
-        <section id="search">
+        <section id="search" name="search">
             <hr />
             <div class="container-fluid">
                 <div class="row">
@@ -66,7 +66,6 @@
         $(document).ready(function () {
             $("#ContinentId").change(function (e) {
                 $("#CountryId").empty();
-                debugger;
                 if ($('#ContinentId :selected').text() == 'Select a continent') {
                     $("#CountryId").attr('disabled', 'disabled');
                     return;
@@ -152,7 +151,7 @@
         });
 
         $('#btnSearch').click(function (e) {
-
+            
             citiesTable.ajax.reload();
 
         });
